@@ -1,0 +1,71 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: Roboto;
+}
+
+.box {
+    width: 400px;
+    height: 400px;
+    border: grey 1px solid;
+    background-color: lightgrey;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display {
+    background-color: white;
+    width: 370px;
+    height: 70px;
+    margin-top: 10px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px;
+    width: 500px;
+    gap: 5px;
+}
+
+.numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+button {
+    width: 70px;
+    height: 70px;
+    font-size: xx-large;
+}
+
+#zero {
+    width: 145px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#clear {
+    background-color: red;
+}
+
+.operators {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+.operators > button {
+    background-color: darkgrey;
+    color: white;
+}
+
+#equals {
+    background-color: lightgreen;
+}
