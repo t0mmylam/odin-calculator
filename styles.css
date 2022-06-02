@@ -72,3 +72,7 @@ button {
 #equals {
     background-color: lightgreen;
 }
+
+.selected {
+    border: yellow 5px solid;
+}
