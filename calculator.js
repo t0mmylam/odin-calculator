@@ -93,6 +93,10 @@ clear.addEventListener('click', () => {
     operator = 0;
     clearOthers();
     display.textContent = number1;
+    Array.from(numButtons).forEach(num => {
+        num.removeEventListener('click', editnumtwo);
+        num.addEventListener('click', editnumone);
+    });
 });
 
 const neg = document.querySelector('#plusminus');
@@ -122,8 +126,5 @@ equals.addEventListener('click', function () {
     number1 = operate(operator, number1, number2);
     console.log(number1);
     display.textContent = number1;
-    Array.from(numButtons).forEach(num => {
-        num.removeEventListener('click', editnumtwo);
-        num.addEventListener('click', editnumone);
-    });
+    number2 = 0;
 });
