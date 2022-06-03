@@ -30,7 +30,12 @@ function operate(o, a, b) {
     }
     if (o == 4) {
         console.log('Divide: ' + a + " & " + b);
-        return a / b;
+        let temp = a/b;
+        if (temp.toString().length>10) {
+            temp = temp.toString().substring(1, 11);
+        }
+        return parseFloat(temp);
+        console.log(parseFloat(temp));
     }
     if (o == 5) {
         console.log('Modulus: ' + a + " & " + b);
