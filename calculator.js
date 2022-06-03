@@ -15,9 +15,26 @@ function divide(a, b) {
 }
 
 function operate(o, a, b) {
+    console.log('Operater: '+o+" A: "+a+" B: "+b)
     if (o == 1) {
         console.log('Add: ' + a + " & " + b);
         return a + b;
+    }
+    if (o == 2) {
+        console.log('Subtract: ' + a + " & " + b);
+        return a - b;
+    }
+    if (o == 3) {
+        console.log('Multiply: ' + a + " & " + b);
+        return a * b;
+    }
+    if (o == 4) {
+        console.log('Divide: ' + a + " & " + b);
+        return a / b;
+    }
+    if (o == 5) {
+        console.log('Modulus: ' + a + " & " + b);
+        return a % b;
     }
 }
 
@@ -103,5 +120,10 @@ const equals = document.querySelector('#equals');
 equals.addEventListener('click', function () {
     clearOthers();
     number1 = operate(operator, number1, number2);
+    console.log(number1);
     display.textContent = number1;
+    Array.from(numButtons).forEach(num => {
+        num.removeEventListener('click', editnumtwo);
+        num.addEventListener('click', editnumone);
+    });
 });
